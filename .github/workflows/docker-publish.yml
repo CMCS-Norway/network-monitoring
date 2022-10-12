@@ -11,7 +11,7 @@ with:
 registry: ghcr.io
 username: ${{ github.actor }}
 password: ${{ secrets.GITHUB_TOKEN }}
-- name: Build Docker image
+name: Build Docker image
 run: |
        docker build . --tag ghcr.io/cmcs-norway/network-monitoring:latest
        docker run ghcr.io/cmcs-norway/network-monitoring:latest
