@@ -11,9 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Build the Docker image 
-      run: |
-            docker build . --file Dockerfile --tag network-monitoring:$(date +%s)
-            docker run ghcr.io/cmcs-norway/network-monitoring:latest
-            docker push ghcr.io/cmcs-norway/network-monitoring:latest
-
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag network-monitoring:$(date +%s)
