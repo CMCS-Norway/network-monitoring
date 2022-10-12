@@ -1,2 +1,2 @@
 FROM ubuntu
-CMD echo "This is a test." | wc -
+CMD echo "This is a test."
